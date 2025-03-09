@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: d74c66e9eb0420e41845d4d8374b5828
+  - enabled: 1
+    path: Assets/Scenes/Mood Tracker.unity
+    guid: 86332fe1a36202e4db3dd3e079594c51
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:

@@ -10,6 +10,7 @@ public class ToDoListManager : MonoBehaviour
     public GameObject taskPrefab;
     public Transform taskListContainer;
     public TextMeshProUGUI warningMessage;
+    public ProgressBar progressBar;
 
     private List<GameObject> tasks = new List<GameObject>();
     private const int maxTasks = 5;
@@ -39,6 +40,8 @@ public class ToDoListManager : MonoBehaviour
             tasks.Add(newTask);
             taskInputField.text = ""; // Clear input field
             warningMessage.gameObject.SetActive(false); // Hide warning
+
+            progressBar.AddPB(20);
         }
     }
 
@@ -51,5 +54,7 @@ public class ToDoListManager : MonoBehaviour
         {
             warningMessage.gameObject.SetActive(false); // Hide warning if tasks drop below limit
         }
+
+        progressBar.AddPB(-5);
     }
 }

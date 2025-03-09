@@ -5,6 +5,8 @@ public class bathAppear : MonoBehaviour
 {
 
     private SpriteRenderer img;
+    public GetSelectedValue getSelectedValue;
+    public ProgressBar progressBar;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,9 +14,10 @@ public class bathAppear : MonoBehaviour
         img = GetComponent<SpriteRenderer>();
     }
 
-    public void ChangeEnabled() {
-        if (img != null) {
+    public void ChangeEnabled(int index) {
+        if (img != null && index == getSelectedValue.GetValue()) {
             img.enabled = true;
+            progressBar.AddPB(-20);
             StartCoroutine(ResetEnabled());
         }
     }

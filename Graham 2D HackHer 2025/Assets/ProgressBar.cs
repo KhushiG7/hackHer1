@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class ProgressBar : MonoBehaviour
 {
 
@@ -19,9 +20,7 @@ public class ProgressBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.isPlaying) {
         GetCurrentFill();
-        }
     }
 
     void GetCurrentFill() {
@@ -29,7 +28,9 @@ public class ProgressBar : MonoBehaviour
         mask.fillAmount = fillAmount;
     }
 
-    void AddPB(int value) {
+    public void AddPB(int value) {
         current = current + value;
+        if (current < 0) current = 0;
+        if (current > maximum) current = maximum;
     }
 }
