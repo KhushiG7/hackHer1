@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Progress Bar Back
+  - Progress Bar Mid
+  - Progress Bar Front
   - 
   - 
   - 
@@ -38,11 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Backround
+  - name: Background
     uniqueID: 1741269713
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HUD
+    uniqueID: 2537007593
     locked: 0
   m_RenderingLayers:
   - Default
