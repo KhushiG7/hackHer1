@@ -40,7 +40,6 @@ public class ToDoListManager : MonoBehaviour
             tasks.Add(newTask);
             taskInputField.text = ""; // Clear input field
             warningMessage.gameObject.SetActive(false); // Hide warning
-
             progressBar.AddPB(20);
         }
     }
@@ -49,12 +48,11 @@ public class ToDoListManager : MonoBehaviour
     {
         tasks.Remove(task);
         Destroy(task);
+        progressBar.AddPB(-5);
 
         if (tasks.Count < maxTasks)
         {
             warningMessage.gameObject.SetActive(false); // Hide warning if tasks drop below limit
         }
-
-        progressBar.AddPB(-5);
     }
 }
